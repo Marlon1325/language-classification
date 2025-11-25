@@ -8,7 +8,7 @@ class Net(nn.Module):
         self.num_layers = num_layers
         self.hidden_size = hidden_size
 
-        self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
+        self.embedding = nn.Embedding(vocab_size, embedding_dim)
 
         self.lstm = nn.LSTM(embedding_dim, hidden_size, num_layers=num_layers, batch_first=True)
 
